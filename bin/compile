@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+BUILD_DIR=$1
+
+echo "-----> Installing FFmpeg"
+FFmpeg_VERSION=4.4.1  # or any other version you need
+curl -L https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-64bit-static.tar.xz | tar xJ
+mv ffmpeg-4.4.1-64bit-static $BUILD_DIR/vendor/ffmpeg
+echo "-----> FFmpeg installation done"
